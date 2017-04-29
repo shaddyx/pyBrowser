@@ -1,7 +1,7 @@
-import pyBrowse.GhostBrowser as browser
+import pyBrowser.GhostBrowser as browser
 import time
 
-from pyBrowse import BrowserUtils
+from pyBrowser import BrowserUtils
 
 browser = browser.GhostBrowser()
 s = browser.startSession()
