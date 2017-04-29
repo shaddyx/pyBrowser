@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://ghost-py.readthedocs.io/en/latest/ -->
+<html class=" js flexbox canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en" data-iorad-extension="chrome"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ghost.py — Ghost.py 0.2.2 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+
+  
+    <link rel="stylesheet" href="./ghost.py — Ghost.py 0.2.2 documentation_files/sphinx_rtd_theme.css" type="text/css">
+  
+    <link rel="stylesheet" href="./ghost.py — Ghost.py 0.2.2 documentation_files/readthedocs-doc-embed.css" type="text/css">
+  
+
+  
+    <link rel="top" title="Ghost.py 0.2.2 documentation" href="http://ghost-py.readthedocs.io/en/latest/#">
+ 
+<!-- RTD Extra Head -->
+
+
+
+<!-- 
+Read the Docs is acting as the canonical URL for your project. 
+If you want to change it, more info is available in our docs:
+  http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="http://ghost-py.readthedocs.org/en/latest/">
+
+<script type="text/javascript" async="" src="./ghost.py — Ghost.py 0.2.2 documentation_files/ga.js"></script><script type="text/javascript">
+  // This is included here because other places don't have access to the pagename variable.
+  var READTHEDOCS_DATA = {
+    project: "ghost-py",
+    version: "latest",
+    language: "en",
+    page: "index",
+    builder: "sphinx",
+    theme: "sphinx_rtd_theme",
+    docroot: "/docs/",
+    
+    source_suffix: ".rst",
+    
+    api_host: "https://readthedocs.org/",
+    commit: "7d603a23d6a4a261a2d832e694a7dd60efbc46f8"
+  }
+  // Old variables
+  var doc_version = "latest";
+  var doc_slug = "ghost-py";
+  var page_name = "index";
+  var html_theme = "sphinx_rtd_theme";
+</script>
+<!-- RTD Analytics Code -->
+<!-- Included in the header because you don't have a footer block. -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17997319-1']);
+  _gaq.push(['_trackPageview']);
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- end RTD Analytics Code -->
+<!-- end RTD <extrahead> -->
+
+
+  
+  <script src="./ghost.py — Ghost.py 0.2.2 documentation_files/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document" cz-shortcut-listen="true">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side"><div class="wy-side-scroll"><div class="wy-side-nav-search">
+        
+
+        
+          <a href="http://ghost-py.readthedocs.io/en/latest/#" class="icon icon-home"> Ghost.py
+        
+
+        
+        </a>
+
+        
+          
+          
+          
+            <div class="version">
+              latest
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://ghost-py.readthedocs.io/en/latest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+
+        
+      </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="http://ghost-py.readthedocs.io/en/latest/#"><span class="toctree-expand"></span>ghost.py</a><ul>
+<li><a class="reference internal" href="http://ghost-py.readthedocs.io/en/latest/#installation">Installation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="http://ghost-py.readthedocs.io/en/latest/#module-ghost"><span class="toctree-expand"></span>API</a><ul>
+<li><a class="reference internal" href="http://ghost-py.readthedocs.io/en/latest/#ghost">Ghost</a></li>
+<li><a class="reference internal" href="http://ghost-py.readthedocs.io/en/latest/#session">Session</a></li>
+</ul>
+</li>
+</ul>
+</div>
+          
+        
+      </div><div class="wy-menu rst-pro"><div class="rst-pro-about"><a href="http://docs.readthedocs.io/en/latest/ethical-advertising.html"><i class="fa fa-info-circle"></i></a></div><a class="rst-pro-image-wrapper" href="http://readthedocs.org/sustainability/click/101/bVAsPcmmNHhC/" target="_blank"><img class="rst-pro-image" src="./ghost.py — Ghost.py 0.2.2 documentation_files/saved_resource"></a><span>BeeWare is bringing Python to the browser, mobile, and beyond. Support it's development with time, or money from $10/month!</span></div><div class="rst-pro-wrapper"></div></div>
+      
+
+      
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="http://ghost-py.readthedocs.io/en/latest/#">Ghost.py</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://ghost-py.readthedocs.io/en/latest/#">Docs</a> »</li>
+      
+    <li>ghost.py</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/jeanphix/Ghost.py/blob/dev/docs/index.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ghost-py">
+<h1>ghost.py<a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost-py" title="Permalink to this headline">¶</a></h1>
+<a class="reference external image-reference" href="https://drone.io/github.com/jeanphix/Ghost.py/latest"><img alt="https://drone.io/github.com/jeanphix/Ghost.py/status.png" src="./ghost.py — Ghost.py 0.2.2 documentation_files/status.png"></a>
+<p>ghost.py is a webkit web client written in python:</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ghost</span> <span class="kn">import</span> <span class="n">Ghost</span>
+<span class="n">ghost</span> <span class="o">=</span> <span class="n">Ghost</span><span class="p">()</span>
+
+<span class="k">with</span> <span class="n">ghost</span><span class="o">.</span><span class="n">start</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+    <span class="n">page</span><span class="p">,</span> <span class="n">extra_resources</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">"http://jeanphix.me"</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">page</span><span class="o">.</span><span class="n">http_status</span> <span class="o">==</span> <span class="mi">200</span> <span class="ow">and</span> <span class="s">'jeanphix'</span> <span class="ow">in</span> <span class="n">page</span><span class="o">.</span><span class="n">content</span>
+</pre></div>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#installation" title="Permalink to this headline">¶</a></h2>
+<p>ghost.py requires either <a class="reference external" href="https://pyside.github.io/">PySide</a> (preferred) or <a class="reference external" href="http://www.riverbankcomputing.co.uk/software/pyqt/intro">PyQt</a> <a class="reference external" href="http://qt-project.org/">Qt</a> bindings:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>pip install pyside
+pip install ghost.py --pre
+</pre></div>
+</div>
+<p>OSX:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>brew install qt
+mkvirtualenv foo
+pip install -U pip  # make sure pip is current
+pip install PySide
+pyside_postinstall.py -install
+pip install Ghost.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="module-ghost">
+<span id="api"></span><h1>API<a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#module-ghost" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ghost">
+<h2>Ghost<a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ghost.Ghost">
+<em class="property">class </em><code class="descclassname">ghost.</code><code class="descname">Ghost</code><span class="sig-paren">(</span><em>log_level=30, log_handler=&lt;logging.StreamHandler object&gt;, plugin_path=['/usr/lib/mozilla/plugins'], defaults=None</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Ghost" title="Permalink to this definition">¶</a></dt>
+<dd><p><cite>Ghost</cite> manages a Qt application.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>log_level</strong> – The optional logging level.</li>
+<li><strong>log_handler</strong> – The optional logging handler.</li>
+<li><strong>plugin_path</strong> – Array with paths to plugin directories
+(default [‘/usr/lib/mozilla/plugins’])</li>
+<li><strong>defaults</strong> – The defaults arguments to pass to new child sessions.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ghost.Ghost.start">
+<code class="descname">start</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Ghost.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a new <cite>Session</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="session">
+<h2>Session<a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#session" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ghost.Session">
+<em class="property">class </em><code class="descclassname">ghost.</code><code class="descname">Session</code><span class="sig-paren">(</span><em>ghost</em>, <em>user_agent='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML</em>, <em>like Gecko) Chrome/15.0.874.121 Safari/535.2'</em>, <em>wait_timeout=8</em>, <em>wait_callback=None</em>, <em>display=False</em>, <em>viewport_size=(800</em>, <em>600)</em>, <em>ignore_ssl_errors=True</em>, <em>plugins_enabled=False</em>, <em>java_enabled=False</em>, <em>javascript_enabled=True</em>, <em>download_images=True</em>, <em>show_scrollbars=True</em>, <em>network_access_manager_class=&lt;class 'ghost.ghost.NetworkAccessManager'&gt;</em>, <em>web_page_class=&lt;class 'ghost.ghost.GhostWebPage'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session" title="Permalink to this definition">¶</a></dt>
+<dd><p><cite>Session</cite> manages a QWebPage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ghost</strong> – The parent <cite>Ghost</cite> instance.</li>
+<li><strong>user_agent</strong> – The default User-Agent header.</li>
+<li><strong>wait_timeout</strong> – Maximum step duration in second.</li>
+<li><strong>wait_callback</strong> – An optional callable that is periodically
+executed until Ghost stops waiting.</li>
+<li><strong>log_level</strong> – The optional logging level.</li>
+<li><strong>log_handler</strong> – The optional logging handler.</li>
+<li><strong>display</strong> – A boolean that tells ghost to displays UI.</li>
+<li><strong>viewport_size</strong> – A tuple that sets initial viewport size.</li>
+<li><strong>ignore_ssl_errors</strong> – A boolean that forces ignore ssl errors.</li>
+<li><strong>plugins_enabled</strong> – Enable plugins (like Flash).</li>
+<li><strong>java_enabled</strong> – Enable Java JRE.</li>
+<li><strong>download_images</strong> – Indicate if the browser should download images</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ghost.Session.call">
+<code class="descname">call</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.call" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call method on element matching given selector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selector</strong> – A CSS selector to the target element.</li>
+<li><strong>method</strong> – The name of the method to call.</li>
+<li><strong>expect_loading</strong> – Specifies if a page loading is expected.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.capture">
+<code class="descname">capture</code><span class="sig-paren">(</span><em>region=None</em>, <em>selector=None</em>, <em>format=None</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.capture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns snapshot as QImage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>region</strong> – An optional tuple containing region as pixel
+coodinates.</li>
+<li><strong>selector</strong> – A selector targeted the element to crop on.</li>
+<li><strong>format</strong> – The output image format.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.capture_to">
+<code class="descname">capture_to</code><span class="sig-paren">(</span><em>path</em>, <em>region=None</em>, <em>selector=None</em>, <em>format=None</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.capture_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves snapshot as image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> – The destination path.</li>
+<li><strong>region</strong> – An optional tuple containing region as pixel
+coodinates.</li>
+<li><strong>selector</strong> – A selector targeted the element to crop on.</li>
+<li><strong>format</strong> – The output image format.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.clear_alert_message">
+<code class="descname">clear_alert_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.clear_alert_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the alert message</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.click">
+<code class="descname">click</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.click" title="Permalink to this definition">¶</a></dt>
+<dd><p>Click the targeted element.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selector</strong> – A CSS3 selector to targeted element.</li>
+<li><strong>btn</strong> – The number of mouse button.
+0 - left button,
+1 - middle button,
+2 - right button</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.confirm">
+<code class="descname">confirm</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwds</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.confirm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Statement that tells Ghost how to deal with javascript confirm().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>confirm</strong> – A boolean or a callable to set confirmation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ghost.Session.content">
+<code class="descname">content</code><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns current frame HTML as a string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>to_unicode</strong> – Whether to convert html to unicode or not</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ghost.Session.cookies">
+<code class="descname">cookies</code><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.cookies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all cookies.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.delete_cookies">
+<code class="descname">delete_cookies</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.delete_cookies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes all cookies.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.evaluate">
+<code class="descname">evaluate</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates script in page frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>script</strong> – The script to evaluate.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.evaluate_js_file">
+<code class="descname">evaluate_js_file</code><span class="sig-paren">(</span><em>path</em>, <em>encoding='utf-8'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.evaluate_js_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates javascript file at given path in current frame.
+Raises native IOException in case of invalid file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> – The path of the file.</li>
+<li><strong>encoding</strong> – The file’s encoding.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.exists">
+<code class="descname">exists</code><span class="sig-paren">(</span><em>selector</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if element exists for given selector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>string</strong> – The element selector.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.exit">
+<code class="descname">exit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.exit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exits all Qt widgets.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.fill">
+<code class="descname">fill</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.fill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fills a form with provided values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selector</strong> – A CSS selector to the target form to fill.</li>
+<li><strong>values</strong> – A dict containing the values.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.fire">
+<code class="descname">fire</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.fire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fire <cite>event</cite> on element at <cite>selector</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selector</strong> – A selector to target the element.</li>
+<li><strong>event</strong> – The name of the event to trigger.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.frame">
+<code class="descname">frame</code><span class="sig-paren">(</span><em>selector=None</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set main frame as current main frame’s parent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>frame</strong> – An optional name or index of the child to descend to.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.global_exists">
+<code class="descname">global_exists</code><span class="sig-paren">(</span><em>global_name</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.global_exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if javascript global exists.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>global_name</strong> – The name of the global.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.hide">
+<code class="descname">hide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.hide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the webview.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.load_cookies">
+<code class="descname">load_cookies</code><span class="sig-paren">(</span><em>cookie_storage</em>, <em>keep_old=False</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.load_cookies" title="Permalink to this definition">¶</a></dt>
+<dd><p>load from cookielib’s CookieJar or Set-Cookie3 format text file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cookie_storage</strong> – file location string on disk or CookieJar
+instance.</li>
+<li><strong>keep_old</strong> – Don’t reset, keep cookies not overridden.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.open">
+<code class="descname">open</code><span class="sig-paren">(</span><em>address</em>, <em>method='get'</em>, <em>headers={}</em>, <em>auth=None</em>, <em>body=None</em>, <em>default_popup_response=None</em>, <em>wait=True</em>, <em>timeout=None</em>, <em>client_certificate=None</em>, <em>encode_url=True</em>, <em>user_agent=None</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens a web page.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>address</strong> – The resource URL.</li>
+<li><strong>method</strong> – The Http method.</li>
+<li><strong>headers</strong> – An optional dict of extra request hearders.</li>
+<li><strong>auth</strong> – An optional tuple of HTTP auth (username, password).</li>
+<li><strong>body</strong> – An optional string containing a payload.</li>
+<li><strong>default_popup_response</strong> – the default response for any confirm/</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>alert/prompt popup from the Javascript (replaces the need for the with
+blocks)
+:param wait: If set to True (which is the default), this
+method call waits for the page load to complete before
+returning.  Otherwise, it just starts the page load task and
+it is the caller’s responsibilty to wait for the load to
+finish by other means (e.g. by calling wait_for_page_loaded()).
+:param timeout: An optional timeout.
+:param client_certificate An optional dict with “certificate_path” and
+“key_path” both paths corresponding to the certificate and key files
+:param encode_url Set to true if the url have to be encoded
+:param user_agent An option user agent string.
+:return: Page resource, and all loaded resources, unless wait
+is False, in which case it returns None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.print_to_pdf">
+<code class="descname">print_to_pdf</code><span class="sig-paren">(</span><em>path</em>, <em>paper_size=(8.5</em>, <em>11.0)</em>, <em>paper_margins=(0</em>, <em>0</em>, <em>0</em>, <em>0)</em>, <em>paper_units=None</em>, <em>zoom_factor=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.print_to_pdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves page as a pdf file.</p>
+<p>See qt4 QPrinter documentation for more detailed explanations
+of options.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> – The destination path.</li>
+<li><strong>paper_size</strong> – A 2-tuple indicating size of page to print to.</li>
+<li><strong>paper_margins</strong> – A 4-tuple indicating size of each margin.</li>
+<li><strong>paper_units</strong> – Units for pager_size, pager_margins.</li>
+<li><strong>zoom_factor</strong> – Scale the output content.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.prompt">
+<code class="descname">prompt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwds</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.prompt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Statement that tells Ghost how to deal with javascript prompt().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> – A string or a callable value to fill in prompt.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.region_for_selector">
+<code class="descname">region_for_selector</code><span class="sig-paren">(</span><em>selector</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.region_for_selector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns frame region for given selector as tuple.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>selector</strong> – The targeted element.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.save_cookies">
+<code class="descname">save_cookies</code><span class="sig-paren">(</span><em>cookie_storage</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.save_cookies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save to cookielib’s CookieJar or Set-Cookie3 format text file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cookie_storage</strong> – file location string or CookieJar instance.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.set_field_value">
+<code class="descname">set_field_value</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.set_field_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the field matched by given selector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selector</strong> – A CSS selector that target the field.</li>
+<li><strong>value</strong> – The value to fill in.</li>
+<li><strong>blur</strong> – An optional boolean that force blur when filled in.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.set_proxy">
+<code class="descname">set_proxy</code><span class="sig-paren">(</span><em>type_</em>, <em>host='localhost'</em>, <em>port=8888</em>, <em>user=''</em>, <em>password=''</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.set_proxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up proxy for FURTHER connections.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> – proxy type to use:             none/default/socks5/https/http.</li>
+<li><strong>host</strong> – proxy server ip or host name.</li>
+<li><strong>port</strong> – proxy port.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.set_viewport_size">
+<code class="descname">set_viewport_size</code><span class="sig-paren">(</span><em>width</em>, <em>height</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.set_viewport_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the page viewport size.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>width</strong> – An integer that sets width pixel count.</li>
+<li><strong>height</strong> – An integer that sets height pixel count.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show current page inside a QWebView.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.wait_for">
+<code class="descname">wait_for</code><span class="sig-paren">(</span><em>condition</em>, <em>timeout_message</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.wait_for" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits until condition is True.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>condition</strong> – A callable that returns the condition.</li>
+<li><strong>timeout_message</strong> – The exception message on timeout.</li>
+<li><strong>timeout</strong> – An optional timeout.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.wait_for_alert">
+<code class="descname">wait_for_alert</code><span class="sig-paren">(</span><em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.wait_for_alert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for main frame alert().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> – An optional timeout.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.wait_for_page_loaded">
+<code class="descname">wait_for_page_loaded</code><span class="sig-paren">(</span><em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.wait_for_page_loaded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits until page is loaded, assumed that a page as been requested.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> – An optional timeout.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.wait_for_selector">
+<code class="descname">wait_for_selector</code><span class="sig-paren">(</span><em>selector</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.wait_for_selector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits until selector match an element on the frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selector</strong> – The selector to wait for.</li>
+<li><strong>timeout</strong> – An optional timeout.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.wait_for_text">
+<code class="descname">wait_for_text</code><span class="sig-paren">(</span><em>text</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.wait_for_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits until given text appear on main frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>text</strong> – The text to wait for.</li>
+<li><strong>timeout</strong> – An optional timeout.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ghost.Session.wait_while_selector">
+<code class="descname">wait_while_selector</code><span class="sig-paren">(</span><em>selector</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="http://ghost-py.readthedocs.io/en/latest/#ghost.Session.wait_while_selector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits until the selector no longer matches an element on the frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selector</strong> – The selector to wait for.</li>
+<li><strong>timeout</strong> – An optional timeout.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>
+        © Copyright 2014, Jean-Philippe Serafin.
+      
+        <span class="commit">
+          Revision <code>7d603a23d6a4a261a2d832e694a7dd60efbc46f8</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions"><!-- Inserted RTD Footer -->
+<div class="injected">
+
+  
+
+      
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+         <strong> 
+        <dd><a href="http://ghost-py.readthedocs.io/en/latest/">latest</a></dd>
+         </strong> 
+        
+        
+        <dd><a href="http://ghost-py.readthedocs.io/en/stable/">stable</a></dd>
+        
+        
+      </dl>
+      
+      
+
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+        <dd><a href="http://readthedocs.org/projects/ghost-py/downloads/pdf/latest/">PDF</a></dd>
+        
+        <dd><a href="http://readthedocs.org/projects/ghost-py/downloads/htmlzip/latest/">HTML</a></dd>
+        
+        <dd><a href="http://readthedocs.org/projects/ghost-py/downloads/epub/latest/">Epub</a></dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        <!-- These are kept as relative links for internal installs that are http -->
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href="http://readthedocs.org/projects/ghost-py/">Project Home</a>
+        </dd>
+        <dd>
+          <a href="http://readthedocs.org/projects/ghost-py/builds/">Builds</a>
+        </dd>
+        <dd>
+          <a href="http://readthedocs.org/projects/ghost-py/downloads/">Downloads</a>
+        </dd>
+      </dl>
+      
+
+      
+
+      
+      <dl>
+        <dt>On GitHub</dt>
+        <dd>
+          <a href="https://github.com/jeanphix/Ghost.py/blob/dev/docs/index.rst">View</a>
+        </dd>
+        <dd>
+          <a href="https://github.com/jeanphix/Ghost.py/edit/dev/docs/index.rst">Edit</a>
+        </dd>
+      </dl>
+      
+      
+
+      
+      <dl>
+        <dt>Search</dt>
+        <dd>
+          <div style="padding: 6px;">
+            <form id="flyout-search-form" class="wy-form" target="_blank" action="https://readthedocs.org/projects/ghost-py/search/" method="get">
+              <input type="text" name="q" placeholder="Search docs">
+              </form>
+          </div>
+        </dd>
+      </dl>
+      
+
+
+
+      <hr>
+      
+      Free document hosting provided by <a href="https://readthedocs.org/">Read the Docs</a>. 
+      
+
+      
+
+</div>
+</div>
+  </div>
+
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.2.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="./ghost.py — Ghost.py 0.2.2 documentation_files/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="./ghost.py — Ghost.py 0.2.2 documentation_files/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="./ghost.py — Ghost.py 0.2.2 documentation_files/underscore.js"></script>
+      <script type="text/javascript" src="./ghost.py — Ghost.py 0.2.2 documentation_files/doctools.js"></script>
+      <script type="text/javascript" src="./ghost.py — Ghost.py 0.2.2 documentation_files/readthedocs-doc-embed.js"></script>
+
+  
+
+  
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+
+</body></html>

@@ -1,0 +1,4 @@
+#!/bin/bash
+pushd ../
+python setup.py register -r pypi
+popd
